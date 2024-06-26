@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
 import { Usuario } from '../../../../models/usuario';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
 import { FocusTrap } from '@angular/cdk/a11y';
-import { FirestoreService } from '../../../shared/services/firestore.service.spec';
-
+import { FirestoreService } from '../../../shared/services/firestore.service';
 
 
 
 @Component({
   selector: 'app-iniciosesion',
   templateUrl: './iniciosesion.component.html',
-  styleUrl: './iniciosesion.component.css'
+  styleUrls: ['./iniciosesion.component.css']
 })
 
 export class IniciosesionComponent {
