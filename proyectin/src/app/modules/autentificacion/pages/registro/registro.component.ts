@@ -1,9 +1,9 @@
 import { Usuario } from '../../../../models/usuario';
 import { Component } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
+
 //importamos componente de rutas de angular 
 import { Router } from '@angular/router';
-
 import { FirestoreService } from '../../../shared/services/firestore.service';
 
 @Component({
@@ -19,15 +19,13 @@ export class RegistroComponent {
     public servicioAuth: AuthService,
     public serviceFirestore: FirestoreService,
     public ServicioRutas: Router
-  ) { }
+  ){}
 
 
 
-  //importar la interfaz de usuario inizialisada
+  //importar la interfaz de usuario inicializada
   usuarios: Usuario = {
     uid: '',
-    nombre: '',
-    apellido: '',
     email: '',
     rol: '',
     password: '',
@@ -38,7 +36,6 @@ export class RegistroComponent {
 
   //funcion para el registro de nuevos usuarios
   async registrar() {
-
     //registro con servio de auth
     const credenciales = {
       email: this.usuarios.email,
@@ -50,24 +47,19 @@ export class RegistroComponent {
       .then(res => {
         alert("te registraste con exito")
         //el metodo navigate  nos redirecciona a otra vista
-        this.ServicioRutas.navigate(['/inicio'])
+        this.ServicioRutas.navigate(['/iniciosesion'])
       })
       //el meotodo cath captura una falla y la devuelve cuando la promesa salga mal
       .catch(error => {
         alert("hubo un error al registrar un nuevo usuario :( \n" + error)
+        console.log(error)
       })
 
     const uid = await this.servicioAuth.obtenerUID();
-    this.usuarios.uid = uid;
-    this.guardarUsuario();
+    this.usuarios.uid = uid; 
     //lamamos a la funcion para ejecutarla
+    this.guardarUsuario();
     this.limpiarInputs();
-
-    //usamos local storage para guardar los datos
-
-
-    //localStorage.setItem(this.usuarios.email, JSON.stringify(credenciales))
-
   }
 
   async guardarUsuario() {
@@ -90,8 +82,6 @@ export class RegistroComponent {
       email: this.usuarios.email = '',
       password: this.usuarios.password = '',
       uid: this.usuarios.uid = '',
-      nombre: this.usuarios.nombre = '',
-      apellido: this.usuarios.apellido = '',
       rol: this.usuarios.rol = '',
     }
   }

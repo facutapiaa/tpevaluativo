@@ -1,0 +1,19 @@
+#registro{
+    text-align: center;
+    background-color: rgb(183, 182, 182);
+    display: flex;
+    justify-content: right;
+    border-radius: 15px;
+}
+#todo{
+    display: flex;
+  
+}
+
+mat-form-field{
+    display: flex;
+    justify-content:space-around
+}
+.container{
+    padding: 10px;
+}

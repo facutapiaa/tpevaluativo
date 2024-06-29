@@ -15,7 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 
 
-@NgModule({
+@NgModule({ 
   declarations: [
     IniciosesionComponent,
     RegistroComponent

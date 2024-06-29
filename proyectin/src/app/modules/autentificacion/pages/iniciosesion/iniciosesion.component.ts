@@ -18,13 +18,11 @@ export class IniciosesionComponent {
   constructor(
     public servicioAuth: AuthService,
     public servicioRutas: Router,
-    public servcioFirestore: FirestoreService, 
-  ){}
+    public servcioFirestore: FirestoreService,
+  ) { }
   //importar la interfaz de usuario inizialisada
   usuario: Usuario = {
     uid: '',
-    nombre: '',
-    apellido: '',
     email: '',
     rol: '',
     password: '',
@@ -47,5 +45,18 @@ export class IniciosesionComponent {
       .catch(err => {
         alert("hubo un error al inicio sesion")
       })
+  }
+
+
+
+  limpiarInputs() {
+
+    //en la constante inputs llamamos los atributos y los inicializamos vacios
+    const inputs = {
+      email: this.usuario.email = '',
+      password: this.usuario.password = '',
+      uid: this.usuario.uid = '',
+      rol: this.usuario.rol = '',
+    }
   }
 }

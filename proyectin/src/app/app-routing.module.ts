@@ -9,7 +9,7 @@ const routes: Routes = [
 //loadChildren: indica que habra una ruta hija
 //.then funcion asincronica tipo promesa
 {
-  path:"",loadChildren:()=>import('./modules/autentificacion/AutentificacionModule').then(m=>m.AutentificacionModule)
+  path:"",loadChildren:()=>import('./modules/autentificacion/autentificacion.module').then(m=>m.AutentificacionModule)
 }
 ];
 
