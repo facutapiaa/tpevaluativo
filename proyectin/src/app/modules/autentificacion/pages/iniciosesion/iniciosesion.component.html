@@ -16,7 +16,8 @@
 
         <mat-form-field>
             <mat-label>ingrese una contraseña</mat-label>
-            <input [(ngModel)]="usuario.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required="6">
+            <input [(ngModel)]="usuario.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
+                required="6">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -25,7 +26,7 @@
         </mat-form-field>
 
         <!--boton para enviar a la base de datos-->
-        <button class="boton" mat-raised-button color="primary" (click)="iniciar()" >Registrar</button>
+        <button class="boton" mat-raised-button color="primary" (click)="iniciar()">Iniciar Sesión</button>
     </div>
 
 </div>

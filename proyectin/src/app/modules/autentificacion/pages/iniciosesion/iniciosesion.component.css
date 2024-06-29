@@ -1,0 +1,100 @@
+/* Estilo del contenedor principal */
+.container {
+    text-align: center;
+    background-color: #cfcfcf;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 1.8em;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Estilo de los campos de formulario */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+    color: #0066cc;
+}
+
+mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #0066cc;
+}
+
+mat-icon {
+    color: #0066cc;
+}
+
+.mat-hint {
+    color: #999;
+}
+
+/* Estilo del botón */
+.boton {
+    background-color: #0066cc;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #004d99;
+}
+
+/* ----------------- Consultas de Medios para Responsividad ----------------- */
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .container {
+        margin: 0;
+        padding: 20px;
+        border-radius: 0; /* Eliminamos los bordes redondeados */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .boton {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Estilo para pantallas mayores (tabletas y pantallas grandes) */
+@media (min-width: 600px) {
+    .container {
+        width: 80%;
+        max-width: 700px; /* Permitir un poco más de espacio en pantallas medianas */
+        margin: 20px auto;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+
+    .boton {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+}

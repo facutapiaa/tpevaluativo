@@ -5,4 +5,5 @@ export interface Camisetas {
     talle:string;
     img:string;
     alt:string;
+    precio:Number
 }

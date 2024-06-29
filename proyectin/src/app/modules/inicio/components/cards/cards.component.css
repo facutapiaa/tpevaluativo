@@ -1,0 +1,61 @@
+/* Estilo general para el contenedor de tarjetas */
+.container.cards {
+    display: flex;               /* Activa el modelo de diseño flex */
+    flex-wrap: wrap;             /* Permite que las tarjetas se envuelvan a la siguiente fila si no caben en una línea */
+    justify-content: center;     /* Centra las tarjetas horizontalmente */
+    padding: 16px;               /* Espacio interno alrededor del contenedor */
+}
+
+/* Estilo específico para cada tarjeta */
+.card {  
+    flex: 1 1 calc(25% - 32px);    /* Ajusta la base del contenedor menos el espacio entre tarjetas */
+    max-width: 25%;                /* Fija el ancho máximo de la tarjeta */
+    box-sizing: border-box;        /* Incluye el padding y el border en el tamaño total del elemento */
+    background-color: #c3c3c3; 
+    border: 1px solid #797979;   /* Borde */
+    border-radius: 8px;            /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    /* Sombra suave para dar efecto de elevación */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;    /* Transiciones suaves para el hover */
+    margin: 1%;
+}
+
+/* Efecto hover para interactividad */
+.card:hover {
+    transform: translateY(-5px);    /* Eleva ligeramente la card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);   /* Aumenta la sombra */
+}
+
+/* Estilo de la imagen de la card */
+.card img {
+    width: 100%;    /* La imagen ocupa todo el ancho de la card */
+    height: auto;   /* Mantiene la proporción de la imagen */
+}
+
+
+/* Título de la card */
+.card-title {
+    text-align: center;
+    font-size: 1.25em;    /* Tamaño de la fuente mayor */
+    margin-bottom: 8px;    /* Espacio debajo del título */
+    color: #272727;    /* Color del texto */
+    font-weight: bold;    /* Texto en negrita */
+}
+
+/* Descripción de la card */
+.card-description {
+    font-size: 1em;   /* Tamaño estándar de la fuente */
+    color: #666;   /* Color del texto gris suave */
+    line-height: 1.5;   /* Altura de línea para mejor legibilidad */
+}
+
+/* Botón de la card */
+.card-button {
+    background-color: #007BFF;    /* Color de fondo del botón */
+    transition: background-color 0.3s ease-in-out;    /* Transición suave para el hover */
+}
+
+/* Efecto hover en el botón */
+.card-button:hover {
+    background-color: #0056b3;    /* Oscurece el color del fondo */
+}
+

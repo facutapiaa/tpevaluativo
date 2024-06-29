@@ -1,19 +1,12 @@
 <div id="todo">
-    <div class="container">
-        <h1>Registrate</h1>
-        <p>para poder contuinar en nuestra pagina te pedimos que te crees un ususario :D</p>
-        <h3>¿Ya tienes una cuenta?</h3>
-        <button routerLink="/inicio-sesion">inicie session</button>
-    </div>
-
     <div class="container" id="registro">
         <div class="row">
-            <h1>registrate</h1>
-
+            <h1>Registrate</h1>
+            <p>para poder contuinar en nuestra pagina te pedimos que te crees un ususario :D</p>
             <i class="material-icons" style="font-size: 200px;">person</i>
 
             <!--Email de usuario-->
-            <mat-form-field >
+            <mat-form-field>
                 <mat-label>ingrese su email</mat-label>
                 <input [(ngModel)]="usuarios.email" matInput placeholder="ej: juancitofoyth32@gmail.com">
                 <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
@@ -40,8 +33,14 @@
                 <mat-hint align="start">Mínimo:6/{{input.value.length}}</mat-hint>
             </mat-form-field>
 
-            <!--boton para enviar a la base de datos-->
-            <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+
         </div>
+        <!--boton para enviar a la base de datos-->
+        <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+    </div> 
+    
+    <div class="container" id="cambio">
+        <h3>¿Ya tienes una cuenta?</h3>
+        <button routerLink="/inicio-sesion">iniciar sesion</button>
     </div>
 </div>
