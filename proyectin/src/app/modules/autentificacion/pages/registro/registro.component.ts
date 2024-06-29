@@ -47,7 +47,7 @@ export class RegistroComponent {
       .then(res => {
         alert("te registraste con exito")
         //el metodo navigate  nos redirecciona a otra vista
-        this.ServicioRutas.navigate(['/iniciosesion'])
+        this.ServicioRutas.navigate(['/inicio-sesion'])
       })
       //el meotodo cath captura una falla y la devuelve cuando la promesa salga mal
       .catch(error => {

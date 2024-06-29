@@ -39,7 +39,7 @@ export class IniciosesionComponent {
       //metemos la constante dentro de la coleccion
 
       .then(res => {
-        alert("se produjo un error")
+        alert("se inicio sesion correctamente")
         this.servicioRutas.navigate(['/inicio'])
       })
       .catch(err => {
