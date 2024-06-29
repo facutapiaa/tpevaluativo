@@ -2,12 +2,13 @@
 <div class="card" style="width: 18rem;" *ngFor="let card of cards"> 
   <div class="card-body">
     <h3 class="card-title">{{card.id}}</h3>
-    <img width="250px" height="250px" src="{{card.img}}" class="card-img-bottom" alt="{{card.alt}}">
+    <img width="220px" height="220px" src="{{card.img}}" class="card-img-bottom" alt="{{card.alt}}">
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Talle: {{card.talle}}</li>
     <li class="list-group-item">Precio: {{card.precio}}</li>
     <li class="list-group-item">Club: {{card.club}}</li>
+    <li class="list-group-item">Temporada: {{card.temporada}}</li>
   </ul>
   <a href="#" class="btn btn-primary">Ver Mas</a>
 </div>

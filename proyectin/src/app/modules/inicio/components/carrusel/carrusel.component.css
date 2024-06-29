@@ -1,0 +1,64 @@
+.todo{
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo general para el carrusel */
+#fullScreenCarousel {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+
+#fullScreenCarousel .carousel-inner {
+    height: 100%;
+}
+
+/* Asegurar que las imágenes ocupen toda la pantalla */
+#fullScreenCarousel .carousel-item img {
+    scale: 0.9;
+    display: block; 
+}
+
+/* Estilos para los controles del carrusel */
+#fullScreenCarousel .carousel-control-prev,
+#fullScreenCarousel .carousel-control-next {
+    width: 5%;
+}
+
+#fullScreenCarousel .carousel-control-prev-icon,
+#fullScreenCarousel .carousel-control-next-icon {
+    filter: invert(100%);
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/*responsivos*/
+
+@media (max-width: 600px) {
+    /* Ajustar la altura del carrusel para pantallas pequeñas */
+    #fullScreenCarousel {
+        height: 70%;
+    }
+
+    /* Ajustar la altura de las imágenes para que se adapten mejor a pantallas pequeñas */
+    #fullScreenCarousel .carousel-item img {
+        max-height: 70%;
+    }
+}
+
+/* Media Queries para dispositivos con ancho mayor a 600px */
+@media (min-width: 601px) {
+
+    /* Ajustar la altura de las imágenes para que se adapten mejor a pantallas grandes */
+    #fullScreenCarousel .carousel-item img {
+        max-height: 100vh;
+    }
+
+    /* Mostrar los controles del carrusel en pantallas grandes */
+    #fullScreenCarousel .carousel-control-prev,
+    #fullScreenCarousel .carousel-control-next {
+        display: flex;
+    }
+}
