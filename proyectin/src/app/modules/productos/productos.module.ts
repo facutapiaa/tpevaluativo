@@ -5,6 +5,7 @@ import { ProductosRoutingModule } from './productos-routing.module';
 import { ArgentinaComponent } from './pages/argentina/argentina.component';
 import { BarcelonaComponent } from './pages/barcelona/barcelona.component';
 import { MadridComponent } from './pages/madrid/madrid.component';
+import { BocaComponent } from './pages/boca/boca.component';
 
 
 
@@ -12,7 +13,8 @@ import { MadridComponent } from './pages/madrid/madrid.component';
   declarations: [
     ArgentinaComponent,
     BarcelonaComponent,
-    MadridComponent
+    MadridComponent, 
+    BocaComponent
   ],
   imports: [
     CommonModule,
