@@ -59,7 +59,6 @@ p {
 
 /* Botones */
 button {
-    background-color: #0066cc;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -68,8 +67,12 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+#cambio button{
+ background-color: #0066cc;
+ transition: background-color 0.3s ease;
+}
 
-button:hover {
+#cambio button:hover {
     background-color: #004d99;
 }
 
@@ -78,7 +81,7 @@ button[routerLink] {
 }
 
 /* Estilo de iconos */
-.material-icons {
+mat-form-field .material-icons {
     color: #0066cc;
 }
 
@@ -168,10 +171,6 @@ mat-form-field.mat-focused .mat-form-field-ripple {
     button {
         font-size: 1.1em;
         padding: 15px 25px;
-    }
-
-    .material-icons {
-        font-size: 200px;
     }
 
     #registro {
